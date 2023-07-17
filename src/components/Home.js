@@ -36,7 +36,7 @@ export default function Home(props) {
         });
       })
       .catch((err) => console.log(err));
-  }, [currLocation.latitude]);
+  }, [currLocation.latitude,currLocation.longitude,cityname]);
 
   // calling geolocation only when the get device location button is pressed
   function getLocation() {

@@ -28,28 +28,28 @@ function Weatherinfo() {
       .then((res) => {
         // changes the images according to the climate
         let imagePath = "/images/cloudy.png";
-        if (res.data.weather[0].main == "Clouds") {
+        if (res.data.weather[0].main === "Clouds") {
           imagePath =
             "https://img.icons8.com/?size=1x&id=uEV36IijHymM&format=png";
-        } else if (res.data.weather[0].main == "Clear") {
+        } else if (res.data.weather[0].main === "Clear") {
           imagePath =
             "https://img.icons8.com/?size=1x&id=tqP4CSFqqdNr&format=png";
-        } else if (res.data.weather[0].main == "Rain") {
+        } else if (res.data.weather[0].main === "Rain") {
           imagePath =
             "https://img.icons8.com/?size=1x&id=VY9MLUH4ggfo&format=png";
-        } else if (res.data.weather[0].main == "Strom") {
+        } else if (res.data.weather[0].main === "Strom") {
           imagePath = "https://icons8.com/icon/64213/storm";
-        } else if (res.data.weather[0].main == "Mist") {
+        } else if (res.data.weather[0].main === "Mist") {
           imagePath = "https://img.icons8.com/?size=1x&id=113637&format=png";
-        } else if (res.data.weather[0].main == "Fog") {
+        } else if (res.data.weather[0].main === "Fog") {
           imagePath = "https://img.icons8.com/?size=1x&id=67558&format=png";
-        } else if (res.data.weather[0].main == "Drizzle") {
+        } else if (res.data.weather[0].main === "Drizzle") {
           imagePath = "https://img.icons8.com/?size=1x&id=39336&format=png";
         } else {
           imagePath =
             "https://img.icons8.com/?size=1x&id=uEV36IijHymM&format=png";
         }
-        if (res.data.cod == 200) {
+        if (res.data.cod === 200) {
           setData(true);
         }
         setState({
@@ -65,9 +65,9 @@ function Weatherinfo() {
       })
       // throwing error messages conditionally
       .catch((err) => {
-        if (err.response.status == 404) {
+        if (err.response.status === 404) {
           setError(errorMessage);
-        } else if (err.response.status == 400) {
+        } else if (err.response.status === 400) {
           setErrorTwo(newErrorMessage);
         }
       });
@@ -92,7 +92,7 @@ function Weatherinfo() {
             <br />
             <hr />
             <br />
-            <img src={state.image} />
+            <img src={state.image} alt='not found' />
             <h1>{state.celcius}°C</h1>
             <h3>{state.description}</h3>
             <h3>
