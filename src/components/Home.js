@@ -26,7 +26,7 @@ export default function Home(props) {
   // using axios in useeffect to get the  current city from api
   useEffect(() => {
     geoLocation();
-    const apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${currLocation.latitude}&lon=${currLocation.longitude}&appid=d6e85595178e4ee92b71962005591fd5&units=metric`;
+    const apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${currLocation.latitude}&lon=${currLocation.longitude}&appid=cc254fbfd8bf9fedac7d44b9ffd836d6&units=metric`;
     axios
       .get(apiURL)
       .then((res) => {
