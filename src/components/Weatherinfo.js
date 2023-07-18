@@ -21,7 +21,7 @@ function Weatherinfo() {
   });
 
   useEffect(() => {
-    const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${inputName}&appid=cc254fbfd8bf9fedac7d44b9ffd836d6&units=metric`;
+    const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${inputName}&appid=d6e85595178e4ee92b71962005591fd5&units=metric`;
 
     axios
       .get(apiURL)
